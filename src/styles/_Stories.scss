@@ -1,0 +1,73 @@
+.stories {
+  padding-top: 60px;
+  margin-left: 100px;
+  margin: 0 auto;
+
+  &__main {
+    width: 700px;
+  }
+
+  &__name {
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 4px;
+  }
+
+  &__data {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.767);
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 36px;
+  }
+
+  &__list {
+    height: 1200px;
+    overflow-y: scroll;
+    list-style-type: none;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 35px;  
+    border-bottom: 1px solid #e6e6e6;
+  }
+  &__text {
+    margin-right: 35px;
+    color: #757575;
+  }
+
+  &__titles {
+    font-size: 40px;
+    margin-bottom: 0;
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    width: 120px;
+    height: 38px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    color: #fff;
+    margin-right: 20px;
+    background: rgba(26, 137, 23, 1);
+  }
+  &__button {
+    width: 130px;
+    height: 38px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    font-size: 16px;
+    background-color: transparent;
+  }
+
+}

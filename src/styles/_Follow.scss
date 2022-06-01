@@ -1,0 +1,91 @@
+.follow {
+  padding-top: 50px;
+  width: 50%;
+
+  &__plus {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(242, 242, 242, 1);
+    border-radius: 50%;
+    font-size: 18px;
+    border: none;
+    margin-right: 15px;
+  }
+  &__boxing {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__btn {
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50%;
+    background-color: rgba(242, 242, 242, 1);
+    margin-right: 15px;
+  }
+  &__keep {
+    color: #333;
+    font-size: 18px;
+  }
+  &__cates {
+    display: flex;
+    align-items: center;
+    margin: 25px 0;
+  }
+  &__cate {
+    border: none;
+    padding: 10px 15px;
+    margin-right: 15px;
+    border-radius: 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+  }
+  &__links {
+    margin-bottom: 35px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E6E6E6;
+  }
+  &__link {
+    margin-right: 32px;
+    color: #757575;
+    text-decoration: none;
+    &:hover {
+      color: #757575;
+    }
+  }
+
+  &__text {
+    margin-bottom: 24px;
+  }
+  &__btn {
+    width: 250px;
+    height: 41px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
+    background: rgba(26, 137, 23, 1);
+  }
+
+  &__brow {
+    text-decoration: none;
+  }
+}

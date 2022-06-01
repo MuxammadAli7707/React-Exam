@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap');
+.add {
+  width: 1072px;
+  margin: 0 auto;
+  padding-top: 20px;
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+
+  &__link {
+    border: none;
+    width: 70px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 50px;
+    color: #fff;
+    margin-right: 25px;
+    background-color: #1a8917;
+  }
+  
+  &__dots {
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    margin-right: 25px;
+  }
+  &__bell {
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    color: #757575;
+    margin-right: 25px;
+  }
+  &__user {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__inputbox {
+    padding: 60px 120px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__input {
+    border: none;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    margin-bottom: 25px;
+    font-size: 40px;
+
+    &::placeholder {
+      color: #c4c4c4;
+    }
+  }
+
+  &__input:focus {
+    outline: none;
+  } 
+  &__inputing:focus {
+    outline: none;
+  }
+  &__inputing {
+    border: none;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    font-size: 30px;
+    color: #757575;
+    resize: none;
+
+    &::placeholder {
+      color: #c4c4c4;
+    }
+  }
+
+}

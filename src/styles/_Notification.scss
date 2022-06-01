@@ -1,0 +1,35 @@
+.note {
+  width: 45%;
+  padding: 70px 0;
+  height: 800px;
+
+  &__title {
+    margin-bottom: 40px;
+    font-size: 50px;
+  }
+
+  &__box {
+    display: flex;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 20px;
+  }
+
+  &__text {
+    margin-right: 35px;
+    color: #292929;
+    cursor: pointer;
+  }
+  &__texting {
+    cursor: pointer;
+    color: #757575;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 20px;
+  }
+  &__stat {
+    color: rgba(26, 137, 23, 1);
+  }
+}

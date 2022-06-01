@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1504px;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+main {
+  flex-grow: 1;
+  margin-left: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+@import './Adding';
+@import './Notification';
+@import './Nav';
+@import './Aside';
+@import './Category';
+@import './Signup';
+@import './List';
+@import './Stories';
+@import './Modaling';
+@import './Topic';
+@import './TopicInfo';
+@import './Follow';

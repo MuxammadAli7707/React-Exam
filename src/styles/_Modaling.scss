@@ -1,0 +1,106 @@
+.modaling {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color:rgba(255, 255, 255, 0.94);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.4s ease;
+
+  &__main {
+    width: 900px;
+    min-height: 500px;
+    background-color: #fff;
+    box-shadow: rgb(0 0 0 / 15%) 0px 2px 10px;
+    border-radius: 4px;
+    padding: 18px;
+  }
+
+  &__xbtn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: rgb(117, 117, 117);
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    color: rgba(41, 41, 41, 1);
+    margin-bottom: 60px;
+  }
+
+  &__input {
+    width: 400px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(118, 118, 118);
+    padding: 4px 0;
+    margin-bottom: 4px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__count {
+    display: block;
+    font-size: 12px;
+    color: rgba(117, 117, 117, 1);
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    color: rgba(26, 137, 23, 1);
+    margin-bottom: 20px;
+  }
+
+  &__check {
+    display: block;
+    margin-bottom: 80px;
+  }
+
+  &__cancel {
+    font-size: 14px;
+    color: rgba(41, 41, 41, 1);
+    background: none;
+    border: 1px solid rgb(117, 117, 117);
+    border-radius: 99em;
+    padding: 7px 16px 9px;
+    margin-right: 15px;
+  }
+
+  &__btn {
+    background-color: rgb(26, 137, 23);
+    border: 1px solid rgb(26, 137, 23);
+    border-radius: 99em;
+    font-size: 16px;
+    color: #fff;
+    padding: 7px 16px 9px;
+  }
+}
+
+.openModal {
+  display: flex;
+  top: 0;
+  opacity: 1;
+}

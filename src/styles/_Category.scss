@@ -1,0 +1,40 @@
+.category {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  &__box {
+    padding: 40px 0 24px 0;
+  }
+
+  &__link {
+    color: rgba(0, 0, 0, 0.774);
+    text-decoration: none;
+    transition: all 0.4s ease;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+
+  &__plus {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(242, 242, 242, 1);
+    border-radius: 50%;
+    font-size: 18px;
+
+    margin-right: 10px;
+  }
+
+  &__btn {
+    border: none;
+    padding: 10px 15px;
+    margin-right: 15px;
+    border-radius: 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+  }
+}
