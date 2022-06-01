@@ -12,6 +12,9 @@ function Category({ Obj, setContent }) {
 
   let cateHandler = (e) => {
     setContent(Obj.filter((item) => item.type === e.target.id));
+    if(e.target.id === "all") {
+      setContent(Obj.filter(item => item.type !== e.target.id))
+    }
   };
 
   return (
@@ -25,6 +28,9 @@ function Category({ Obj, setContent }) {
         </Link>
       </div>
       <ul className="category__list d-flex list-unstyled">
+      <li className="category__item">
+        <button onClick={cateHandler} id="all" className="category__btn">All</button>
+      </li>
         {arr.map((item, key) => {
           return (
             <li className="category__item" key={key + 1}>

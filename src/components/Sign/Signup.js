@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import signup from '../../assets/images/signup.svg'
 
-export default function SignUp({setName, setLastName, setPhone,setMail, setPass}) {
+function SignUp({setName, setLastName, setPhone,setMail, setPass}) {
 
   let [fname, setfname] = useState(true)
   let [lastname, setlastname] = useState(true)
@@ -61,19 +61,6 @@ export default function SignUp({setName, setLastName, setPhone,setMail, setPass}
       }
   }
 
-  //  let paHandler = (e) => {
-  //    let pass = e.target.value
-  //     setPass(pass)
-
-  //    if(pass.match(/[A-Z]/) === null || pass.match(/[0-9]/) === null) {
-  //      setpassword(false)
-  //    }
-  //    else {
-  //      setpassword(true)
-  //      setCount(count + 1)
-  //    }
-  //  }
-
   let fnameHandler = (e) => {
    let name = e.target.value;
 
@@ -82,6 +69,7 @@ export default function SignUp({setName, setLastName, setPhone,setMail, setPass}
 
     }else{
       setfname(true);
+      setCount(count + 1)
     }
   }
 
@@ -92,6 +80,7 @@ export default function SignUp({setName, setLastName, setPhone,setMail, setPass}
       setlastname(false);
     }else{
       setlastname(true);
+      setCount(count + 1)
     }
   }
 
@@ -115,24 +104,12 @@ export default function SignUp({setName, setLastName, setPhone,setMail, setPass}
       setemail(true)
     }
   }
-
-  // let passHandler = (e) => {
-  //   let key = e.target.value
-  //   if(key.match(/[A-Z]/) === null || key.match(/[0-9]/) === null) {
-  //     setpassword(false)
-  //   }
-  //   else {
-  //     setpassword(true)
-  //     setCount(count + 1)
-  //   }
-  // }
-
   return(
     <>
       <div className="sign">
         <div className="sign__main d-flex">
           <div className="sign__imgbox">
-            <img className="sign__img" src={signup} alt="" />
+            <img className="sign__img" src='https://cdn-icons-png.flaticon.com/512/5968/5968885.png' alt="logo" />
           </div>
           <div className="sign__rightbox">
             <div className="sign__box">
@@ -155,7 +132,7 @@ export default function SignUp({setName, setLastName, setPhone,setMail, setPass}
                   <input id="uppass" className={password ? "sign__input" : "sign__input sign__error"} type="password" placeholder="Password"/>
                 </label>
                 <Link to="/home">
-                  <button type="submit" className="sign__btn" disabled={count >= 1 ? false : true}>Next step</button>
+                  <button type="submit" className="sign__btn" disabled={count >= 4 ? false : true}>Next step</button>
                 </Link>
               </form>
             </div>
@@ -166,4 +143,4 @@ export default function SignUp({setName, setLastName, setPhone,setMail, setPass}
   )
 }
 
-// onBlur={paHandler} onChange={passHandler}
+export default SignUp

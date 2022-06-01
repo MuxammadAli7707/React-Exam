@@ -13,10 +13,14 @@ function Topic({
   setWishlist,
   wishlist,
   save,
-  setSave
+  setSave,
+  storyText,
+  name,
+  lastName,
 }) {
 
   let [showing, setshowing] = useState(false)
+  let [icon, setIcon] = useState(false)
 
   let openSave = () => {
     setWishlist(true)
@@ -27,7 +31,9 @@ function Topic({
     if (save.indexOf(el) !== -1) 
     return
     setSave([...save, el])
+    setIcon(!icon)
   }
+
 
   return(
     <div className="topic">
@@ -37,80 +43,153 @@ function Topic({
           </Link>
           <button className="topic__btn">Recommended</button>
         </div>
-        <ul className="topic__list">
-          {
-            content.map((item, index) => {
-              return(
-                <li key={index + 1} className="topic__item">
-                  <div className="topic__inner d-flex align-items-center">
-                    <img className="topic__avatar" src={item.avatar} alt={item.name} />
-                    <h3 className="topic__name">{item.name}</h3>
-                    <span className="topic__data">{item.data}</span>
-                  </div>
-
-                  <div className="topic__main d-flex">
-                    <div className="topic__box">
-
-                      <Link className="topic__link" to={`/info/${item.id}`}>
-                        <h2 className="topic__title">{item.title}</h2>
-                        <p className="topic__desc">{item.desc}</p>
-                      </Link>
-
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="d-flex align-items-center">
-                          <button className="topic__type">{item.type}</button>
-                          <span className="topic__read">{item.read}</span>
-                          <span className="topic__select">Selected for you</span>
-                        </div>
-                        <div className="topic__btnbox d-flex">
-                          <button id={'opening' +item.id} onClick={()=> saveItem(item)} className="topic__mbtn">
-                            <i className='bx bx-bookmark-alt-plus topic__bookmark'></i>
-                          </button>
-
-
-                          <div id={'modal'+item.id}
-                          style={{display: showing === item.id ? "block" : "none",}}
-                          className={`topic__modal`}
-                          >
-
-                            <ul className="topic__modal-list">
-                              <li className="topic__modal-item">
-                                <label className="d-flex align-items-center" htmlFor="savedcheck">
-                                  <input className="me-2" type="checkbox" name="save" id="savedcheck"
-                                  defaultChecked={true} /> Reading list
-                                </label>
-                              </li>
-                              {
-                                wishCate.map((save, index) => {
-                                  return(
-                                    <li key={index + 1} className="topic__modal-item">
-                                      <label className="d-flex align-items-center" htmlFor={save.name + "id"}>
-                                        <input className="me-2" type="checkbox" name="save" id={save.name + "id"}
-                                        defaultChecked={false} /> {save.name}
-                                      </label>
-                                    </li>
-                                  )
-                                })
-                              }
-                            </ul>
-                              <button onClick={openSave} className="topic__modal-mopen">Create new list</button>
-                          </div>
-                          <i className='bx bx-dots-horizontal-rounded topic__dot'></i>
-                        </div>
-                      </div>
+          <ul className="topic__list">
+          {storyText.map((item, i) => {
+            console.log(item);
+              if(item.text !== ''){
+                return (
+                  <li key={i + 1} className="topic__item">
+                    <div className="topic__inner d-flex align-items-center">
+                      <img className="topic__avatar" src='https://cdn.icon-icons.com/icons2/1141/PNG/512/1486395884-account_80606.png' alt='user' />
+                      <h3 className="topic__name">{name} {lastName}</h3>
+                      <span className="topic__data">Today</span>
                     </div>
 
-                    <Link className="topic__link" to={`/info/${item.id}`}>
-                      <div className="topic__imgbox">
-                        <img className="topic__img" src={item.img} alt={item.name} />
+                    <div className="topic__main d-flex">
+                      <div className="topic__box">
+                        <Link className="topic__link" to={`/info/${item.id}`}>
+                          <h2 className="topic__title">5 Advanced JavaScript concepts that will make you a better developer</h2>
+                          <p className="topic__desc">{item.text}</p>
+                        </Link>
+
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="d-flex align-items-center">
+                            <button className="topic__type">JavaScript</button>
+                            <span className="topic__read">1 min ago</span>
+                            <span className="topic__select">Selected for you</span>
+                          </div>
+                          <div className="topic__btnbox d-flex">
+                            <button id={'opening' +item.id} onClick={()=> saveItem(item)} className="topic__mbtn">
+                              <i className='bx bx-bookmark-alt-plus topic__bookmark'></i>
+                            </button>
+
+                            
+                            <div id={'modal'+item.id}
+                            style={{display: showing === item.id ? "block" : "none",}}
+                            className={`topic__modal`}
+                            >
+
+                              <ul className="topic__modal-list">
+                                <li className="topic__modal-item">
+                                  <label className="d-flex align-items-center" htmlFor="savedcheck">
+                                    <input className="me-2" type="checkbox" name="save" id="savedcheck"
+                                    defaultChecked={true} /> Reading list
+                                  </label>
+                                </li>
+                                {
+                                  wishCate.map((save, index) => {
+                                    return(
+                                      <li key={index + 1} className="topic__modal-item">
+                                        <label className="d-flex align-items-center" htmlFor={save.name + "id"}>
+                                          <input className="me-2" type="checkbox" name="save" id={save.name + "id"}
+                                          defaultChecked={false} /> {save.name}
+                                        </label>
+                                      </li>
+                                    )
+                                  })
+                                }
+                              </ul>
+                                <button onClick={openSave} className="topic__modal-mopen">Create new list</button>
+                            </div>
+                            <i className='bx bx-dots-horizontal-rounded topic__dot'></i>
+                          </div>
+                        </div>
                       </div>
-                    </Link>
-                  </div>
-                </li>
-              )
-            })
-          }
-        </ul>
+
+                      <Link className="topic__link" to={`/info/${item.id}`}>
+                        <div className="topic__imgbox">
+                          <img className="topic__img" src='https://cdn.icon-icons.com/icons2/1141/PNG/512/1486395884-account_80606.png' alt='img' />
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                 )
+              }
+
+            })}
+            {
+              content.map((item, index) => {
+                return (
+                  <li key={index + 1} className="topic__item">
+                    <div className="topic__inner d-flex align-items-center">
+                      <img className="topic__avatar" src={item.avatar} alt={item.name} />
+                      <h3 className="topic__name">{item.name}</h3>
+                      <span className="topic__data">{item.data}</span>
+                    </div>
+
+                    <div className="topic__main d-flex">
+                      <div className="topic__box">
+
+                        <Link className="topic__link" to={`/info/${item.id}`}>
+                          <h2 className="topic__title">{item.title}</h2>
+                          <p className="topic__desc">{item.desc}</p>
+                        </Link>
+
+                        <div className="d-flex justify-content-between align-items-center">
+                          <div className="d-flex align-items-center">
+                            <button className="topic__type">{item.type}</button>
+                            <span className="topic__read">{item.read}</span>
+                            <span className="topic__select">Selected for you</span>
+                          </div>
+                          <div className="topic__btnbox d-flex">
+                            <button id={'opening' +item.id} onClick={()=> saveItem(item)} className="topic__mbtn">
+                              <i className='bx bx-bookmark-alt-plus topic__bookmark'></i>
+                            </button>
+
+
+                            <div id={'modal'+item.id}
+                            style={{display: showing === item.id ? "block" : "none",}}
+                            className={`topic__modal`}
+                            >
+
+                              <ul className="topic__modal-list">
+                                <li className="topic__modal-item">
+                                  <label className="d-flex align-items-center" htmlFor="savedcheck">
+                                    <input className="me-2" type="checkbox" name="save" id="savedcheck"
+                                    defaultChecked={true} /> Reading list
+                                  </label>
+                                </li>
+                                {
+                                  wishCate.map((save, index) => {
+                                    return(
+                                      <li key={index + 1} className="topic__modal-item">
+                                        <label className="d-flex align-items-center" htmlFor={save.name + "id"}>
+                                          <input className="me-2" type="checkbox" name="save" id={save.name + "id"}
+                                          defaultChecked={false} /> {save.name}
+                                        </label>
+                                      </li>
+                                    )
+                                  })
+                                }
+                              </ul>
+                                <button onClick={openSave} className="topic__modal-mopen">Create new list</button>
+                            </div>
+                            <i className='bx bx-dots-horizontal-rounded topic__dot'></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <Link className="topic__link" to={`/info/${item.id}`}>
+                        <div className="topic__imgbox">
+                          <img className="topic__img" src={item.img} alt={item.name} />
+                        </div>
+                      </Link>
+                    </div>
+                  </li>
+                )
+              })
+            }
+          </ul>
         <Modaling
           setWishlist={setWishlist}
           wishlist={wishlist}

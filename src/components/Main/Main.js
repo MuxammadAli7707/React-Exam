@@ -14,7 +14,10 @@ function Main({
   setWishlist,
   wishlist,
   save,
-  setSave
+  setSave,
+  storyText,
+  name,
+  lastName
 }) {
 
   return(
@@ -35,6 +38,9 @@ function Main({
          setWishCate={setWishCate}
          setWishCate2={setWishCate2}
          wishCate2={wishCate2}
+         storyText={storyText}
+         name={name}
+         lastName={lastName}
       />
     </main>
   )

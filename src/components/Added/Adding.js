@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-function Adding() {
+let count = 100;
+function Adding({storyText, setStoryText, emptyStory, setEmptyStory}) {
+
+  const textAreaHandle = (e) =>{
+    setEmptyStory(e.target.value)
+  }
+  
+  const publishHandler = () =>{
+    setStoryText([
+      ...storyText, {
+        text: emptyStory,
+        id: count
+      }
+    ])
+    setEmptyStory('')
+    count++
+  }
+ 
   return (
     <div className='add'>
       <div className='add__main'>
@@ -12,8 +29,8 @@ function Adding() {
           <p className='add__desc'>Draft</p>
         </div>
         <div className='add__info'>
-          <Link to='/'>
-            <button className='add__link'>Publish</button>
+          <Link to='/home'>
+            <button onClick={publishHandler} className='add__link'>Publish</button>
           </Link>
             <button className='add__dots'>
               <i className='bx bx-dots-horizontal-rounded' ></i>
@@ -24,12 +41,19 @@ function Adding() {
       </div>
 
       <form className='add__inputbox'>
-        {/* <input placeholder='Title' className='add__input' type="text" /> */}
-        <textarea placeholder='Title' className='add__inputing' cols="90" rows="100"></textarea> 
-        {/* <input className='add__inputing' type='text' /> */}
+        <div className="add__ball">
+            <svg class="svgIcon-use" width="30" height="30">
+              <path
+                d="M20 12h-7V5h-1v7H5v1h7v7h1v-7h7"
+                fill-Rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+        <textarea onChange={textAreaHandle} value={emptyStory} placeholder='Title' className='add__inputing' cols="90" rows="100"></textarea> 
       </form>
     </div>
   );
 }
 
-export default Adding;
+
+export default Adding

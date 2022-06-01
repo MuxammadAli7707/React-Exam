@@ -12,7 +12,7 @@ export default function SignIn() {
       <div className="sign">
         <div className="sign__main d-flex">
           <div className="sign__imgbox">
-            <img className="sign__img" src={signup} alt="" />
+            <img className="sign__img" src='https://cdn-icons-png.flaticon.com/512/5968/5968885.png' alt="logo" />
           </div>
           <div className="sign__rightbox">
             <div className="sign__box">

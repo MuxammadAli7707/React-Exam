@@ -48,9 +48,79 @@
   &__users {
     margin-bottom: 40px;
   }
+  &__use {
+    border: none;
+    background-color: transparent;
+  }
   
   &__user {
     width: 40px;
     height: 40px;
   }
+  
+  &__modal{
+    z-index: 100;
+    width: 290px;
+    height: 496px;
+    background-color: #fff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    position: absolute;
+    bottom: 90px;
+    left: 10px;
+    border-radius: 10px;
+    padding: 0 10px;
+  }
+  
+  &__modal__list {
+    font-family: sans-serif;
+  }
+  &__modal {
+    animation: list 0.5s ease;
+  }
+  &__modal__box {
+    margin-left: 20px;
+  }
+
+  &__modal__name {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  &__modal__mail {
+    color: #757575;
+    font-size: 13px;
+  }
+  
+  @keyframes list {
+    from {
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  
+  &__user__icon {
+    font-size: 22px;
+    color: #8a6b49;
+  }
+  &__modal__item {
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+  
+    &:nth-child(3) {
+      color: rgba(26, 137, 23, 1);
+      border-bottom: 2px solid #e6e6e6;
+    }
+    &:nth-child(8) {
+      border-bottom: 2px solid #e6e6e6;
+    }
+  }
+  
+}
+.none{
+  display: none;
+}
+.block{
+  display: block;
 }

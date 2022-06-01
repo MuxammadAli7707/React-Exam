@@ -5,12 +5,16 @@ import Main from "../Main/Main";
 import Nav from "../Nav/Nav";
 
 function Home({
+  storyText,
   setWishCate,
   setWishCate2,
   wishCate2,
   wishCate, 
   setWishlist, 
   wishlist, 
+  name,
+  lastName,
+  mail,
   save, 
   setSave}) {
 
@@ -20,8 +24,12 @@ function Home({
   return(
     <div className='container'>
       <div className='d-flex'>
-        <Nav />
+        <Nav 
+        name={name}
+        mail={mail}
+        />
         <Main
+          storyText={storyText}
           Obj={Obj}
           content={content}
           setContent={setContent}
@@ -33,6 +41,8 @@ function Home({
           wishlist={wishlist}
           save={save}
           setSave={setSave}
+          name={name}
+          lastName={lastName}
         />
         <Aside />
       </div>

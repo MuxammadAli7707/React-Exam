@@ -27,6 +27,8 @@ function List({
         wishCate={wishCate}
         setWishCate2={setWishCate2}
         wishCate2={wishCate2}
+        save={save}
+        setSave={setSave}
       />
       <Nav />
       <div className="list">
@@ -37,8 +39,12 @@ function List({
           </button>
         </div>
         <div className="list__saved">
+          <Link to='/list'>
           <button className="list__saved-btn list__saved-activ">Saved</button>
+          </Link>
+          <Link to='/high'>
           <button className="list__saved-btn">Highlights</button>
+          </Link>
         </div>
 
         <div className="list__inner">
@@ -72,7 +78,7 @@ function List({
             </div>
           </div>
 
-          <Link className="list__link" to="/stories">
+          <Link className="list__link" to="/reading">
             <div className="list__reading">
               <div className="list__reading-box">
                 <h2 className="list__reading-title">Reading</h2>
@@ -93,101 +99,6 @@ function List({
               </div>
             </div>
           </Link>
-
-          <ul className="stories__list">
-            {save.map((item, index) => {
-              return (
-                <li className="stories__item">
-                  <div className="topic__header d-flex align-items-center mb-3">
-                    <img
-                      className="topic__avatar"
-                      src={item.avatar}
-                      alt={item.name}
-                    />
-                    <h3 className="topic__name">{item.name}</h3>
-                    <span className="topic__data">{item.data}</span>
-                  </div>
-                  <div className="topic__main d-flex">
-                    <div className="topic__box">
-                      <Link className="topic__link" to={`/info/${item.id}`}>
-                        <h2 className="topic__title">{item.title}</h2>
-                        <p className="topic__desc">{item.desc}</p>
-                      </Link>
-
-                      <div className="d-flex justify-content-between align-items-center">
-                        <div className="d-flex align-items-center">
-                          <span className="topic__type">{item.type}</span>
-                          <span className="topic__read">{item.read}</span>
-                          <span className="topic__select">
-                            Selected for you
-                          </span>
-                        </div>
-                        <div className="topic__btnbox d-flex">
-                          <button className="topic__mbtn">
-                            <i className="bx bx-bookmark-alt-plus topic__bookmark"></i>
-                          </button>
-                          <div className="topic__modal">
-                            <ul className="topic__modal-list">
-                              <li className="topic__modal-item">
-                                <label
-                                  className="d-flex align-items-center"
-                                  htmlFor="savedcheck"
-                                >
-                                  <input
-                                    className="me-2"
-                                    type="checkbox"
-                                    name="save"
-                                    id="savedcheck"
-                                    defaultChecked={true}
-                                  />{" "}
-                                  Reading list
-                                </label>
-                              </li>
-                              {save.map((save, index) => {
-                                return (
-                                  <li
-                                    key={index + 771}
-                                    className="topic__modal-item"
-                                  >
-                                    <label
-                                      className="d-flex align-items-center"
-                                      htmlFor={save.name + "id"}
-                                    >
-                                      <input
-                                        className="me-2"
-                                        type="checkbox"
-                                        name="save"
-                                        id={save.name + "id"}
-                                        defaultChecked={false}
-                                      />{" "}
-                                      {save.name}
-                                    </label>
-                                  </li>
-                                );
-                              })}
-                            </ul>
-                            <button className="topic__modal-mopen">
-                              Create new list
-                            </button>
-                          </div>
-                          <i className="bx bx-dots-horizontal-rounded topic__dot"></i>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="topic__imgbox">
-                      <img
-                        className="topic__img"
-                        src={item.img}
-                        alt={item.name}
-                      />
-                    </div>
-                  </div>
-
-                </li>
-              );
-            })}
-          </ul>
 
           {wishCate.map((item, index) => {
             return (

@@ -20,17 +20,37 @@
 
   &__title {
     font-weight: 600;
-    font-size: 32px;
+    font-size: 26px;
     color: #000;
-    margin-bottom: 36px;
+    margin-bottom: 10px;
   }
 
-  &__list {
-    height: 1200px;
+  &__listing {
+    height: 950px;
     overflow-y: scroll;
     list-style-type: none;
   }
 
+  &__item {
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  &__pub {
+    color: #757575;
+    font-size: 14px;
+    &:nth-child(1) {
+      margin-right: 15px;
+    }
+    &:nth-child(2) {
+      margin-right: 18px;
+    }
+  }
+  &__ikon {
+    border: none;
+    background-color: transparent;
+    font-size: 22px;
+  }
   &__links {
     display: flex;
     align-items: center;
@@ -45,6 +65,7 @@
 
   &__titles {
     font-size: 40px;
+    font-weight: 700;
     margin-bottom: 0;
   }
   &__btns {
@@ -69,5 +90,8 @@
     font-size: 16px;
     background-color: transparent;
   }
+}
 
+.bx-upload {
+  margin-right: 15px;
 }

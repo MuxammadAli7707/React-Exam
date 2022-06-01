@@ -11,6 +11,9 @@ import SignUp from './components/Sign/Signup';
 import Note from './components/Notification/Note';
 import Follow from './components/Follow/Follow';
 import Stories from './components/Saving/Stories';
+import { Object } from './components/Object/Object';
+import Reading from './components/Saving/Reading';
+import Highlights from './components/Highlight/Highlight';
 
 function App() {
   let [name, setName] = useState()
@@ -26,9 +29,11 @@ function App() {
 
   let [save, setSave] = useState([])
 
+  let [storyText, setStoryText] = useState([])  
+  let [emptyStory, setEmptyStory] = useState('')
+  
   return(
     <>
-
       <Routes>
         <Route path='/' element={<SignUp
           setName={setName}
@@ -40,6 +45,10 @@ function App() {
         <Route path='/signin' element={<SignIn />} />
         
         <Route path="/home" element={<Home
+          storyText={storyText}
+          name={name}
+          lastName={lastName}
+          mail={mail}
           wishCate={wishCate}
           setWishCate={setWishCate}
           setWishlist={setWishlist}
@@ -52,6 +61,10 @@ function App() {
 
         <Route path='note' element={<Note />} />
         <Route path='/follow' element={<Follow />} />
+        <Route path='/high' element={<Highlights />} />
+        <Route path='/reading' element={<Reading
+          save={save}
+        />} />
         
         <Route path="/list" element={<List
           setWishlist={setWishlist}
@@ -63,15 +76,23 @@ function App() {
           save={save}
           setSave={setSave}
         />} />
-          {/* <Route path="/cinfo" element={<TopicInfo />} /> */}
-          <Route path="/info/:id" element={<TopicInfo />} />
+        
+          <Route path="/info/:id" element={<TopicInfo
+            name={name}
+            lastName={lastName} 
+            storyText={storyText}
+          />} />
           
           <Route path="/stories" element={<Stories
-            save={save}
-            setSave={setSave}
+            storyText={storyText} 
           />} />
 
-          <Route path='/add' element={<Adding />} />
+          <Route path='/add' element={<Adding
+            storyText={storyText} 
+            setStoryText={setStoryText}
+            emptyStory={emptyStory}
+            setEmptyStory={setEmptyStory}
+          />} />
       </Routes>
     </>
 
