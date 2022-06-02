@@ -8,7 +8,7 @@ import Comment from "./Comments/Comment";
 function TopicInfo({storyText, name, lastName}) {
 
 
-  let [count, setCount] = useState(0);
+  let [count, setCount] = useState(10);
   let location = useLocation();
   let [block, setBlock] = useState(false)
   let mopenHandler = () => {

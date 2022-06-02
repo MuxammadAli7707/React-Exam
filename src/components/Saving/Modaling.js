@@ -37,7 +37,7 @@ function Modaling({
           </div>
         <div className="modaling__box">
           <h2 className="modaling__title">Create new list</h2>
-          <form onSubmit={showHandler} className="modaling__form" action="">
+          <form onSubmit={showHandler} className="modaling__form">
             <label htmlFor="listinput">
               <input onChange={inputHandler} className="modaling__input" id="listinput" type="text" max={60} placeholder="Give it a name" />
               <div className="d-flex justify-content-end">
@@ -46,13 +46,13 @@ function Modaling({
             </label>
             <span className="modaling__desc">Add a description</span>
             <label className="modaling__check" htmlFor="listcheck">
-            <input className="" type="checkbox" name="check" id="listcheck" /> Make it private
+            <input type="checkbox" name="check" id="listcheck" /> Make it private
             </label>
             <div className="d-flex justify-content-center">
               <button onClick={closedHandler} type="button" className="modaling__cancel">Cancel</button>
-               <button type="sumbit" className="modaling__btn">Create</button>
+               <button type="sumbit"  disabled={num.length >= 0 ? false : true} className="modaling__btn">Create</button>
             </div>
-          </form>
+          </form> 
         </div>
       </div>
     </div>

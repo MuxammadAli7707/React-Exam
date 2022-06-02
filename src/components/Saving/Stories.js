@@ -20,7 +20,7 @@ function Stories({ storyText }) {
           </div>
           <div className='stories__links'>
             <p className='stories__text'>Drafts</p>
-            <p className='stories__text'>Published 1</p>
+            <p className='stories__text'>Published</p>
             <p className='stories__text'>Responses</p>
           </div>
           

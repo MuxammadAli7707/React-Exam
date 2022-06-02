@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Comments from "./Comments";
-// import Comments from "./Commeents";
-// import Replay from "./Replay";
 
-export default function Comment({
+function Comment({
   block,
   setBlock,
   item
@@ -35,7 +33,7 @@ export default function Comment({
 
 
   return(
-    <section className={`comment ${block ? 'nonee' : 'blockk'}`}>
+    <div className={`comment ${block ? 'nonee' : 'blockk'}`}>
       <div className="comment__main">
         <div className="d-flex align-items-center justify-content-between mb-2">
         <h2 className="comment__title">Responses ({item.comment})</h2>
@@ -90,7 +88,7 @@ export default function Comment({
           newcomment.map((items, key) => {
             return (
               <Comments
-                key={key+566}
+                key={key + 1} 
                 newcomment={newcomment}
                 com={items}
                 item={item}
@@ -101,6 +99,8 @@ export default function Comment({
         }
       </ul>
       </div>
-    </section>
+    </div>
   )
 }
+
+export default Comment

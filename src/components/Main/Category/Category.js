@@ -29,12 +29,12 @@ function Category({ Obj, setContent }) {
       </div>
       <ul className="category__list d-flex list-unstyled">
       <li className="category__item">
-        <button onClick={cateHandler} id="all" className="category__btn">All</button>
+        <button onClick={cateHandler} id="all" className="topic__type">All</button>
       </li>
         {arr.map((item, key) => {
           return (
             <li className="category__item" key={key + 1}>
-              <button onClick={cateHandler} id={item} className="category__btn">
+              <button onClick={cateHandler} id={item} className="topic__type">
                 {item}
               </button>
             </li>

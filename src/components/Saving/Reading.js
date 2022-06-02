@@ -32,7 +32,7 @@ function Reading({ save }) {
         <ul className="stories__list reading__list list-unstyled">
             {save.map((item, index) => {
               return (
-                <li className="stories__item">
+                <li className="stories__item reading__item">
                   <div className='reading__inputing'>
                     <textarea className='reading__input' placeholder='Add a note...' cols="100" rows="2"></textarea>
                   </div>
