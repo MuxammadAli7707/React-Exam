@@ -15,7 +15,7 @@ function Nav({name, mail}) {
             <Navbar />
           <div className="nav__users">
               <button className="nav__use" onClick={() => setClick(!isClicked)}>
-                <img className='nav__user' src="https://cdn.icon-icons.com/icons2/1141/PNG/512/1486395884-account_80606.png" alt="user" />
+                <img className='nav__user' src="https://logodix.com/logo/1070509.png" alt="user" />
               </button>
           </div>
 
