@@ -43,7 +43,7 @@ function Adding({storyText, setStoryText, emptyStory, setEmptyStory}) {
               <i className='bx bx-dots-horizontal-rounded' ></i>
             </button>
             <button className='add__bell'><i className='bx bx-bell' ></i></button>
-            <img className='add__user' src="https://cdn.icon-icons.com/icons2/1141/PNG/512/1486395884-account_80606.png" alt="user" />
+            <img className='add__user' src="https://logodix.com/logo/1070509.png" alt="user" />
         </div>
       </div>
 

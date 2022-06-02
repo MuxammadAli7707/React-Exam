@@ -27,7 +27,7 @@ function TopicInfo({storyText, name, lastName}) {
                   <div className="d-flex align-items-center justify-content-between mb-5">
                     <div className="d-flex align-items-center">
                       <div className="about__avatarbox">
-                        <img className="about__avatar" src='https://cdn.icon-icons.com/icons2/1141/PNG/512/1486395884-account_80606.png' alt='user' />
+                        <img className="about__avatar" src='https://logodix.com/logo/1070509.png' alt='user' />
                       </div>
                       <div className="ms-3">
                         <h2 className="about__name">{name} {lastName}</h2>
@@ -57,7 +57,7 @@ function TopicInfo({storyText, name, lastName}) {
                       <h2 className="about__title">{item.title}</h2>
                       <p className="topic__desc">{item.text}</p>
                       <div className="about__imgbox">
-                        <img className="about__img" src='https://miro.medium.com/fit/c/140/140/1*Lrx9FrOmkElKFQIV-NMkBA.png' alt='user' />
+                        <img className="about__img" src='https://logodix.com/logo/1070509.png' alt='user' />
                       </div>
                       <p className="about__text">
                                     Have you ever tried improving yourself, but ended up being lazy and tired again?
@@ -90,12 +90,6 @@ function TopicInfo({storyText, name, lastName}) {
                       </button>
                       <button className="comment__cmbtn"><i className='comment__dicon bx bx-dots-horizontal-rounded'></i></button>
                     </div>
-
-                    {/* <Comment 
-                      item={item}
-                      block={block}
-                      setBlock={setBlock}
-                    /> */}
                 </div>
                 
                 )

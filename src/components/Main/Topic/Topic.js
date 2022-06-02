@@ -50,7 +50,7 @@ function Topic({
                 return (
                   <li key={i + 1} className="topic__item">
                     <div className="topic__inner d-flex align-items-center">
-                      <img className="topic__avatar" src='https://cdn.icon-icons.com/icons2/1141/PNG/512/1486395884-account_80606.png' alt='user' />
+                      <img className="topic__avatar" src='https://logodix.com/logo/1070509.png' alt='user' />
                       <h3 className="topic__name">{name} {lastName}</h3>
                       <span className="topic__data">Today</span>
                     </div>
@@ -108,7 +108,7 @@ function Topic({
 
                       <Link className="topic__link" to={`/info/${item.id}`}>
                         <div className="topic__imgbox">
-                          <img className="topic__img" src='https://cdn.icon-icons.com/icons2/1141/PNG/512/1486395884-account_80606.png' alt='img' />
+                          <img className="topic__img" src='https://logodix.com/logo/1070509.png' alt='img' />
                         </div>
                       </Link>
                     </div>
