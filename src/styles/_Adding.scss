@@ -55,14 +55,15 @@
     height: 40px;
   }
 
-  &__inputbox {
-    padding: 60px 120px;
+  &__form {
+    padding: 30px 120px;
     display: flex;
+    flex-direction: column;
   }
   &__input {
     border: none;
     font-family: 'Tiro Devanagari Hindi', serif;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     font-size: 40px;
 
     &::placeholder {
@@ -95,10 +96,10 @@
     justify-content: center;
     padding-top: 5px;
     padding-left: 5px;
-    top: 0px;
-    left: -20px;
-    width: 65px;
-    height: 38px;
+    top: 150px;
+    left: 60px;
+    width: 40px;
+    height: 40px;
     border: 1px solid #000;
     border-radius: 50%;
     cursor: pointer;

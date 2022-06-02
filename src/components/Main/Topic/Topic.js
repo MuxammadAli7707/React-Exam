@@ -58,7 +58,7 @@ function Topic({
                     <div className="topic__main d-flex">
                       <div className="topic__box">
                         <Link className="topic__link" to={`/info/${item.id}`}>
-                          <h2 className="topic__title">5 Advanced JavaScript concepts that will make you a better developer</h2>
+                          <h2 className="topic__title">{item.title}</h2>
                           <p className="topic__desc">{item.text}</p>
                         </Link>
 

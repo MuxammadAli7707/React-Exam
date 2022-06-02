@@ -54,7 +54,8 @@ function TopicInfo({storyText, name, lastName}) {
                   </div>
 
                   <div className="about__box">
-                      <h2 className="about__title">{item.text}</h2>
+                      <h2 className="about__title">{item.title}</h2>
+                      <p className="topic__desc">{item.text}</p>
                       <div className="about__imgbox">
                         <img className="about__img" src='https://miro.medium.com/fit/c/140/140/1*Lrx9FrOmkElKFQIV-NMkBA.png' alt='user' />
                       </div>

@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 let count = 100;
 function Adding({storyText, setStoryText, emptyStory, setEmptyStory}) {
 
+  let [title, setTitle] = useState('')
+
+  let titleHandler = (e) => {
+    setTitle(e.target.value)
+  }
+
   const textAreaHandle = (e) =>{
     setEmptyStory(e.target.value)
   }
@@ -12,6 +18,7 @@ function Adding({storyText, setStoryText, emptyStory, setEmptyStory}) {
     setStoryText([
       ...storyText, {
         text: emptyStory,
+        title: title,
         id: count
       }
     ])
@@ -40,7 +47,6 @@ function Adding({storyText, setStoryText, emptyStory, setEmptyStory}) {
         </div>
       </div>
 
-      <form className='add__inputbox'>
         <div className="add__ball">
             <svg class="svgIcon-use" width="30" height="30">
               <path
@@ -49,7 +55,9 @@ function Adding({storyText, setStoryText, emptyStory, setEmptyStory}) {
               ></path>
             </svg>
           </div>
-        <textarea onChange={textAreaHandle} value={emptyStory} placeholder='Title' className='add__inputing' cols="90" rows="100"></textarea> 
+      <form className='add__form'>
+      <input onChange={titleHandler} className="add__input" type="text" placeholder="Title" />
+        <textarea onChange={textAreaHandle} value={emptyStory} placeholder='Text' className='add__inputing' cols="90" rows="100"></textarea> 
       </form>
     </div>
   );

@@ -29,7 +29,8 @@ function Stories({ storyText }) {
               if(item.text !== ''){
                 return (
                   <li key={i + 1} className="stories__item">
-                     <h4 className="stories__title">{item.text}</h4>
+                     <h4 className="stories__title">{item.title}</h4>
+                     <p>{item.text}</p>
                      <div className="stories__box d-flex align-items-center">
                        <p className="stories__pub">Published less than a minute ago</p>
                        <span className="stories__pub">1 min read</span>
