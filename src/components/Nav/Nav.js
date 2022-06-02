@@ -50,9 +50,6 @@ function Nav({name, mail}) {
                     <div className="nav__modal__box">
                       <h4 className="nav__modal__name">{name}</h4>
                       <p className="nav__modal__mail">@{mail}</p>
-                      
-                      
-                      
                     </div>
                    
                   </li>
