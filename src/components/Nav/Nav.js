@@ -46,11 +46,15 @@ function Nav({name, mail}) {
                     <p className='mb-4'>Settings</p>
                   </li>
                   <li className='nav__modal__item d-flex align-items-center'>
-                    <img className='nav__user' src="https://cdn.icon-icons.com/icons2/1141/PNG/512/1486395884-account_80606.png" alt="user" />
+                    <img className='nav__user' src="https://imgur.com/a/UmYj1xx.jpg" alt="user" />
                     <div className="nav__modal__box">
                       <h4 className="nav__modal__name">{name}</h4>
                       <p className="nav__modal__mail">@{mail}</p>
+                      
+                      
+                      
                     </div>
+                   
                   </li>
                 </ul>
               </div>
